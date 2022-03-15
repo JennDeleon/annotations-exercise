@@ -1,16 +1,15 @@
-/*
+/**
  * This source file is subject to the license that is bundled with this package in the file LICENSE.
  */
 import java.util.ArrayList;
-import java.util.*;
-//@SuppressWarnings("all")
-
+import java.util.List;
+@SuppressWarnings("all")
 public class Author extends Person {
-    private final List <String> books;
+    private List books;
 
     public Author(String firstName, String lastName) {
         super(firstName, lastName);
-        books = new ArrayList<>();
+        books = new ArrayList();
     }
 
     /**
@@ -30,7 +29,7 @@ public class Author extends Person {
     }
 
     @Override
-    public String fullName() {
+    public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
 }
